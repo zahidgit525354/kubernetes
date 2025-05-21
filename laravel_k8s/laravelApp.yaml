@@ -20,7 +20,9 @@ spec:
             - -c
             - |
               php artisan config:cache && \
-              php artisan migrate --force
+              php artisan migrate --force && \
+              php artisan config:clear && \
+              php artisan cache:clear
           envFrom:
             - configMapRef:
                 name: app-config
