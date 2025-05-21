@@ -14,7 +14,7 @@ spec:
     spec:
       initContainers:
         - name: laravel-init
-          image: zhddoc/laravelapp:v3
+          image: zhddoc/laravelapp:v4
           command:
             - sh
             - -c
@@ -31,7 +31,7 @@ spec:
           #     mountPath: /var/www/html
       containers:
       - name: laravel-app
-        image: zhddoc/laravelapp:v3
+        image: zhddoc/laravelapp:v4
         ports:
         - containerPort: 80
         envFrom:
